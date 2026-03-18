@@ -146,18 +146,18 @@
 }
 
 .oneclick__content {
-    padding-top: 283px;
-    padding-left: 122px;
+    padding-top: f.vw(383);
+    padding-left: f.vw(240);
 
     &-title {
         @include m.fonts('Rubik', 700, 1, 0);
         @include m.fluid-text(36, 32);
         color: v.$color-title;
-        margin-bottom: 40px;
+        margin-bottom: f.vw(40);
     }
 
     &-suptitle {
-        max-width: 370px;
+        max-width: f.vw(370);
         @include m.fonts('Rubik', 400, 1.8, 0);
         @include m.fluid-text(18, 12);
         color: v.$color-grey;
@@ -169,7 +169,7 @@
     }
 
     &-suptitle2 {
-        max-width: 370px;
+        max-width: f.vw(370);
         @include m.fonts('Rubik', 400, 1.8, 0);
         @include m.fluid-text(18, 12);
         color: v.$color-grey;
@@ -177,6 +177,6 @@
 }
 
 .oneclick__gif {
-    padding-top: 233px;
+    padding-top: f.vw(230);
 }
 

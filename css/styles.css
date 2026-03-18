@@ -409,8 +409,8 @@ body {
 }
 
 .oneclick__content {
-  padding-top: 283px;
-  padding-left: 122px;
+  padding-top: 26.5972222222vw;
+  padding-left: 16.6666666667vw;
 }
 .oneclick__content-title {
   font-family: "Rubik";
@@ -419,10 +419,10 @@ body {
   letter-spacing: 0;
   font-size: clamp(32px, 2.5vw, 36px);
   color: #131313;
-  margin-bottom: 40px;
+  margin-bottom: 2.7777777778vw;
 }
 .oneclick__content-suptitle {
-  max-width: 370px;
+  max-width: 25.6944444444vw;
   font-family: "Rubik";
   font-weight: 400;
   line-height: 1.8;
@@ -435,7 +435,7 @@ body {
   color: #7421B0;
 }
 .oneclick__content-suptitle2 {
-  max-width: 370px;
+  max-width: 25.6944444444vw;
   font-family: "Rubik";
   font-weight: 400;
   line-height: 1.8;
@@ -445,7 +445,7 @@ body {
 }
 
 .oneclick__gif {
-  padding-top: 233px;
+  padding-top: 15.9722222222vw;
 }
 
 @font-face {
