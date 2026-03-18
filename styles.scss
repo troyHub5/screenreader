@@ -1,0 +1,36 @@
+@use './helpers/reset';
+@use './helpers/base';
+@use './blocks/header';
+@use './blocks/main';
+@use './blocks/footer';
+
+
+
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik-Medium.woff) format('woff');
+    src: url(../fonts/Rubik-Medium.woff2) format(woff2);
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik-Bold.woff) format('woff');
+    src: url(../fonts/Rubik-Bold.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik-Regular.woff) format('woff');
+    src: url(../fonts/Rubik-Regular.wott2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+

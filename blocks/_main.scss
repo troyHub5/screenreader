@@ -1,0 +1,182 @@
+@use './../abstructs/mixins' as m;
+@use '../abstructs/function'  as f;
+@use './../abstructs/variables' as v;
+
+@use 'sass:math';
+
+.function {
+   width: stretch;
+   margin-top: -283px;
+
+   &__container {
+    width: f.vw(1440);
+    margin-inline: auto;
+   }
+}
+
+.function__container-text {
+    display: flex;
+    width: stretch;
+    gap: 125px;
+    margin-bottom: 80px;
+}
+
+.function__title {
+    max-width: 480px;
+    @include m.fonts('Rubik', 700, 1.2, 0);
+    @include m.fluid-text(36, 20);
+    color: v.$color-title;
+
+    span {
+        @include m.fonts('Rubik', 700, 1.2, 0);
+        @include m.fluid-text(36, 20);
+        color: v.$color-accent;
+    }
+}
+
+.function__subtitle {
+    max-width: 520px;
+    @include m.fonts('Rubik', 400, 1.85, 0);
+    @include m.fluid-text(20, 12);
+    color: v.$color-grey;
+}
+
+.function__galary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 13px;
+}
+
+.card {
+    width: 338px;
+    height: 294px;
+    padding: 50px 60px;
+    border-radius: 10px;
+    box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.13);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: v.$color-accent;
+    }
+
+    p {
+        @include m.fonts('Rubik', 500, 1, 0);
+        @include m.fluid-text(20, 14);
+        color: v.$color-title;
+        margin-top: 40px;
+    }
+}
+
+.record {
+    width: stretch;
+    position: relative;
+
+    &__line {
+        position: absolute;
+        z-index: -2;
+    }
+
+    &__circle {
+        position: absolute;
+        z-index: -1;
+        top: 132px; 
+    }
+
+    &__blure {
+        margin-top: 294px;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: 1440px;
+        gap: 134px;  
+        margin-inline: auto;
+        margin-top: -540px;
+    }
+}
+
+.record__content {
+    padding-top: 65px;
+
+    &-title {
+        @include m.fonts('Rubik', 700, 1, 0);
+        @include m.fluid-text(36,20);
+        color: v.$color-title;
+        margin-bottom: 40px;
+    }
+
+    &-suptitle {
+        max-width: 380px;
+        @include m.fonts('Rubik', 400, 1.8, 0);
+        @include m.fluid-text(18, 14);
+        color: v.$color-grey;
+        margin-bottom: 40px;
+    }
+}
+
+.record__content-suptitle2 {
+    max-width: 380px;
+    @include m.fonts('Rubik', 400, 1.8, 0);
+    @include m.fluid-text(18, 14);
+    color: v.$color-grey;
+
+    span {
+        color: v.$color-accent;
+    }
+}
+
+.record__kube {
+    position: absolute;
+    left: 1338px; 
+}
+
+.record__kube-blure {
+    position: absolute;
+    right: 0;
+    top: 783px;
+}
+
+.record__oneclick {
+    max-width: 1440px;
+    left: 240px;
+    display: flex;
+    gap: 300px;
+    position: absolute;
+    z-index: 10;
+}
+
+.oneclick__content {
+    padding-top: 283px;
+    padding-left: 122px;
+
+    &-title {
+        @include m.fonts('Rubik', 700, 1, 0);
+        @include m.fluid-text(36, 32);
+        color: v.$color-title;
+        margin-bottom: 40px;
+    }
+
+    &-suptitle {
+        max-width: 370px;
+        @include m.fonts('Rubik', 400, 1.8, 0);
+        @include m.fluid-text(18, 12);
+        color: v.$color-grey;
+        margin-bottom: 30px;
+
+        span {
+            color: v.$color-accent;
+        }
+    }
+
+    &-suptitle2 {
+        max-width: 370px;
+        @include m.fonts('Rubik', 400, 1.8, 0);
+        @include m.fluid-text(18, 12);
+        color: v.$color-grey;
+    }
+}
+
+.oneclick__gif {
+    padding-top: 233px;
+}
+

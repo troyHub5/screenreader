@@ -1,0 +1,12 @@
+@use 'sass:math';
+/*@function vw($value, $base: 1140) {
+    @return $value / $base * 100vw;
+} */
+
+@function rem($pixel) {
+    @return math.div($pixel, 16) * 1rem;
+}
+
+@function vw($value, $base: 1440) {
+    @return math.div($value, $base) * 100vw;
+}

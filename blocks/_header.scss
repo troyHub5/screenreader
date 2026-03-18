@@ -1,0 +1,122 @@
+@use './../abstructs/mixins' as m;
+@use '../abstructs/function'  as f;
+@use './../abstructs/variables' as v;
+
+@use 'sass:math';
+
+.header {
+    width: stretch;
+    padding-top: f.vw(49);
+    position: relative;
+
+    &__container {
+        width: 76%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: f.vw(39);
+    }
+
+    &__decorate {
+        width: f.vw(150);
+        height: f.vw(253);
+        position: absolute;
+        
+    }
+}
+
+.header__inner {
+    display: flex;
+    gap: f.vw(60);
+}
+
+.menu__list {
+    display: flex;
+    gap: f.vw(58.5);
+}
+
+.link {
+    @include m.fonts('Rubik', 500, 1.5, 0);
+    font-size: f.vw(16);
+    color: v.$color-nav; 
+    position: relative;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: 0.2s;
+    }
+}
+
+.header__hero {
+    background-image: url(../images/header/group.png);
+    width: stretch;
+    min-height: f.vw(1356);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    &-contant {
+        max-width: f.vw(530); 
+        padding-top: f.vw(155);
+        margin-left: f.vw(230);
+    }
+}
+
+.header__hero-title {
+    @include m.fonts ('Rubik', 700, 1.25, 0);
+    @include m.fluid-text(48, 24);
+    color: v.$color-title;
+    margin-bottom: f.vw(33);
+
+    span {
+        display: inline-block;
+        width: f.vw(212);
+        height: 57px;
+        background-image: url(../images/header/accent.png);
+        color: v.$color-accent;
+        padding-left: f.vw(10);
+    }
+}
+
+.header__hero-subtitle {
+    max-width: f.vw(460);
+    @include m.fonts('Rubik', 400, 1.8, 0.4px);
+    @include m.fluid-text(20, 12);
+    color: v.$color-grey;
+    margin-bottom: f.vw(57);
+}
+
+.header__download {
+    display: block;
+    width: 235px;
+    height: 70px;
+    background: linear-gradient(90deg,#7421B0, #D08EFF);
+    text-align: center;
+    color: v.$color-base;
+    @include m.fonts('Rubik', 500, 4.2, 0);
+    @include m.fluid-text(16, 14);
+    margin-bottom: f.vw(126);
+    border-radius: 5px;
+}
+
+.header__arrow {
+    width: 46px;
+    height: 46px;
+}

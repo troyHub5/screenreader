@@ -1,0 +1,17 @@
+@use './../abstructs/mixins' as m;
+@use '../abstructs/function'  as f;
+@use './../abstructs/variables' as v;
+
+@use 'sass:math';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 1940px;
+    padding: 0 10px;
+    background-color: v.$color-base;
+    font-family: v.$font-family-base;
+    margin-inline: auto;
+}
